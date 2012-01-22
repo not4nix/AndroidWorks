@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView 
+       android:layout_alignParentTop="true" 
+       android:layout_alignParentLeft="true" 
+       android:id="@+id/carName" 
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content"
+       android:textColor="#ef0000"
+       android:textSize="20dip">
+    </TextView>
+    <TextView 
+       android:id="@+id/carId" 
+       android:layout_width="fill_parent"
+  	   android:layout_height="wrap_content"
+       android:layout_below="@+id/carName" 
+       android:layout_alignLeft="@+id/carName" 
+       android:textSize="20dip"
+       android:textColor="#00f60c"/>
+    <TextView
+      android:id="@+id/carUrl" 
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content" 
+      android:layout_below="@+id/carId" 
+      android:layout_alignLeft="@+id/carId"
+      android:textColor="#ffffff"
+      android:textSize="15dip"/>
+</RelativeLayout>
