@@ -59,46 +59,7 @@ public class AsyncCarsActivity extends Activity {
     	
 		@Override
 		protected ArrayList<HashMap<String, Object>> doInBackground(Void... arg0) {
-			try {
-				String url = "http://buyersguide.caranddriver.com/api/feed/?mode=json&q=make";
-				HttpClient client = new DefaultHttpClient();
-				HttpGet get = new HttpGet(url);
-				HttpResponse resp = client.execute(get);
-				String result = "";
-				InputStream in = resp.getEntity().getContent();
-				BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-				StringBuilder str = new StringBuilder();
-				String string = null;
-				while((string = reader.readLine()) != null){
-	                str.append(string + "\n");
-	            }
-	            in.close();
-	            result = str.toString();
-				String s = "";
-				JSONArray entries = new JSONArray(s.substring(s.indexOf("[")));
-				ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String,Object>>();
-				Map<Integer,JsonData> tmap = new TreeMap<Integer,JsonData>();
-				HashMap<String, Object> hash = new HashMap<String, Object>();
-				for (int i=0;i<entries.length();i++){
-					JSONObject jobject = entries.getJSONObject(i);
-					tmap.put(jobject.getInt("id"), new JsonData(jobject.getString("name"),jobject.getString("url"),R.drawable.pface));
-				}
-				for(Entry<Integer, JsonData> entry : tmap.entrySet()){
-					Integer key = entry.getKey();
-		    		JsonData value = entry.getValue();
-		    		hash.put(id, key);
-		    		hash.put(name, value.getName());
-		    		hash.put(url, value.getURL());
-		      	    list.add(hash);
-				}
-			}
-			catch(IOException ex){
-				Log.e("AsyncCarsActivity","IO Exception occured",ex);
-			} 
-			catch (JSONException ex) {
-				Log.e("AsyncCarsActivity","JSONException occured",ex);
-			}
-			return null;
+			
 		}
 
 		@Override
