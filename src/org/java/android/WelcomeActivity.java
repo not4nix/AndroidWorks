@@ -1,4 +1,4 @@
-package org.java.android
+package org.java.android;
 
 public class WelcomeActivity {
 	
