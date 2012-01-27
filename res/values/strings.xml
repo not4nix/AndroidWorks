@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, AsyncCarsActivity!</string>
-    <string name="app_name">CarsFromJson</string>
+    <string name="hello">Hello World, BuyersGuideActivity!</string>
+    <string name="app_name">BuyersGuide</string>
+    <string name="SettingsLabel">Settings</string>
+    <string name="CheckText1">Dont show again</string>
+    <string name="CheckText2">Hide cars which id can be divided by 5</string>
+    <string name="ButtonText1">Save settings</string>
+    <string name="WelcomeText">Welcome to my rocking car application</string>
+    <string name="CheckWelcomeText">Do not show me again</string>
+    <string name="SearchCommentText">Search comments</string>
 </resources>
