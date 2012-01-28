@@ -32,6 +32,20 @@ public class BuyersGuideActivity extends Activity {
         object = this;
         progressBar.setProgress(0);
         new JsonTask().execute();
+        listView.setOnItemClickListener(new OnItemClickListener(){
+			@Override
+			public void onItemClick(AdapterView<?> adapterView, View view, int position,
+					long id) {
+				Object object = listView.getItemAtPosition(position);
+				JsonData jsonData = (JsonData) object;
+				Toast t = new Toast(getApplicationContext());
+				t.setText(jsonData.getName());
+				t.setDuration(100);
+				t.show();
+				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(jsonData.getURL()));
+				startActivity(intent);
+			}
+        });
     }
     
     public static void fillData(){
