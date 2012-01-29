@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -51,6 +52,16 @@ public class BuyersGuideActivity extends Activity {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.list_menu,menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()){
+		case R.id.Settings:
+			return true;
+	    default:
+	    	return super.onOptionsItemSelected(item);
+		}
 	}
     
     public static void fillData(){
