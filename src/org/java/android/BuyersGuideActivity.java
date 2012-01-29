@@ -38,10 +38,6 @@ public class BuyersGuideActivity extends Activity {
 					long id) {
 				Object object = listView.getItemAtPosition(position);
 				JsonData jsonData = (JsonData) object;
-				Toast t = new Toast(getApplicationContext());
-				t.setText(jsonData.getName());
-				t.setDuration(100);
-				t.show();
 				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(jsonData.getURL()));
 				startActivity(intent);
 			}
