@@ -8,6 +8,8 @@ import org.java.android.task.JsonTask;
 import org.java.android.R;
 import android.app.Activity;
 import android.content.Context;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -43,6 +45,13 @@ public class BuyersGuideActivity extends Activity {
 			}
         });
     }
+    
+    @Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.list_menu,menu);
+		return true;
+	}
     
     public static void fillData(){
     	BuyersGuideActivity.progressBar.setVisibility(ProgressBar.GONE);
