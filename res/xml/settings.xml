@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:key="Settings" android:title="Settings" xmlns:android="http://schemas.android.com/apk/res/android">
+        <CheckBoxPreference android:key="Do not show me again" android:title="Don't show me again"></CheckBoxPreference>
+        <CheckBoxPreference android:key="Hide" android:title="Hide cars which id can be divided by 5"></CheckBoxPreference>
+    </PreferenceScreen>
+    
+</PreferenceScreen>
